@@ -17,7 +17,8 @@ while int(userguess) != rand and tries < 3:
         print("new max " + str(usermax))
     tries += 1
     if tries <= 3:
-        if rand == int(userguess):
+        if rand 
+        == int(userguess):
             rand = random.randint(usermin, usermax)
             print("new rand " + str(rand))
 # does not work
@@ -26,5 +27,4 @@ while int(userguess) != rand and tries < 3:
     if int(userguess) < rand:
         print("C'est plus haut !")
     if userguess == rand:
-        print("Victoire en " + str(tries) +
-              " coups! Le chiffre etais " + userguess + " !")
+        print("Victoire en " + str(tries) + " coups! Le chiffre etais " + userguess + " !")
