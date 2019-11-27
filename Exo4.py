@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import random
+
 rand = random.randint(1, 100)
 print(str(rand))
 userguess = 999
