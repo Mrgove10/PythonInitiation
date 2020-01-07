@@ -62,6 +62,8 @@ class Pion():
     def sety(self, value):
         print("Nope !")
 
+    def estProche(self, autre_pion):
+        return (2>=self.getDistance(autre_pion))
 
 class Dame(Pion):
     def __init__(self, xdame=5, ydame=5):

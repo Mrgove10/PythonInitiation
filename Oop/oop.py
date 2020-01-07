@@ -7,3 +7,8 @@ from pion import Dame
 foo = Dame()
 foo.diago("haut-droit")
 print(foo)
+
+from pion import Dame
+foo = Dame()
+foo.diago("haut-droit")
+print(foo)
