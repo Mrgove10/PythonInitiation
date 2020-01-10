@@ -4,13 +4,15 @@ import sys
 
 scoretab = []
 
+
 def score(listresult):
     total = 0
-    listresult.sort(reverse = True)
+    listresult.sort(reverse=True)
     for t in listresult:
         total += t
     percent = listresult[0] / total
     print(percent*100)
+
 
 def search(searchStr):
     req = urllib.request.Request(
@@ -22,11 +24,15 @@ def search(searchStr):
         for resultStats in soup.find_all("div", {"id": "resultStats"}):
             string = resultStats.contents[0]  # gets the content
             stringsplit = string.split()  # splits the string
-            # transformes the string to an int
-            stringtoint = int(stringsplit[1].replace(',', ''))
-            scoretab.append(stringtoint)
-            print(searchStr," ",stringtoint )
+            stringtoint = int(stringsplit[1].replace(',', ''))  # transformes the string to an int
+            scoretab.append(stringtoint) 
+            print(searchStr, " ", stringtoint)
 
-for i in range(1, len(sys.argv)):
-    search(sys.argv[i])
-score(scoretab)
+try : 
+    for i in range(1, len(sys.argv)):
+        search(sys.argv[i])
+    score(scoretab)
+    exit(0)
+except IndexError:
+    print("pas asset d'aguments")
+    exit(1)

@@ -1,0 +1,12 @@
+from vehicule import * 
+foo = Vehicule("BMW Série 2", 1350, 55) 
+foo.Accelerer() 
+print(foo)
+foo.Accelerer() 
+print(foo)
+foo.Freiner() 
+print(foo)
+foo.Freiner() 
+print(foo)
+foo.Freiner() 
+print(foo)
